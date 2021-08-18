@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'YoutubeClone'
 ]
 
@@ -73,7 +74,6 @@ WSGI_APPLICATION = 'Youtube_Clone_Project.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
 
 
 # Password validation
@@ -122,4 +122,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 try:
     from Youtube_Clone_Project.local_settings import *
 except ImportError:
-        pass
+    pass
