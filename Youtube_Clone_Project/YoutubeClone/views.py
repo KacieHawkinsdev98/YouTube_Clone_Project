@@ -41,7 +41,7 @@ class CommentsDetail(APIView):
 
     def put(self, request, pk):
         comment = self.get_object(pk)
-        serializer = CommentsSerializer(song, data=request.data)
+        serializer = CommentsSerializer(comment, data=request.data)
         if serializer.is_valid():
             serializer.update(comment, request.data)
             serializer.save()
@@ -51,6 +51,6 @@ class CommentsDetail(APIView):
 
     def delete(self, request, pk):
         comment = self.get_object(pk)
-        serializer = SongSerializer(song)
+        serializer = CommentsSerializer(comment)
         comment.delete()
         return Response(serializer.data)
