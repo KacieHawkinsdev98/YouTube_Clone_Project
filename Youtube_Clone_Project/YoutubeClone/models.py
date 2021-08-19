@@ -4,7 +4,7 @@ from django.db import models
 
 
 class Comments(models.Model):
-    video_id = models.CharField(max_length=50)
+    video_id = models.CharField(max_length=50, default='')
     comment = models.CharField(max_length=500)
     replies = models.CharField(max_length=500)
     likes = models.IntegerField()
