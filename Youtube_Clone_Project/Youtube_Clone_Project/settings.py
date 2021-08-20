@@ -53,7 +53,7 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware'
 ]
 
-COR_ORIGIN_ALLOW_ALL = True
+CORS_ORIGIN_ALLOW_ALL = True
 
 ROOT_URLCONF = 'Youtube_Clone_Project.urls'
 
@@ -127,3 +127,4 @@ try:
     from Youtube_Clone_Project.local_settings import *
 except ImportError:
     pass
+
